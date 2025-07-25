@@ -90,3 +90,13 @@ const swiper = new Swiper(".swiper", {
     spaceBetween: 20,
     loop: true,
 });
+
+// JS to toggle the mobile menu
+
+document.addEventListener("DOMContentLoaded", function () {
+  const menuBtn = document.getElementById("menu-btn");
+  const navLinks = document.getElementById("nav-links");
+  menuBtn.addEventListener("click", function () {
+    navLinks.classList.toggle("open");
+  });
+});

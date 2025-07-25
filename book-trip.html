@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book a Trip | Amanda's T&T Global</title>
+  <link rel="stylesheet" href="remixicon.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      background: #f7f8fa;
+      color: #222;
+    }
+
+    .book-trip-container {
+      max-width: 500px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+      padding: 32px 24px;
+    }
+
+    .book-trip-header {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .book-trip-header h2 {
+      color: #1e88e5;
+      margin-bottom: 8px;
+    }
+
+    .book-trip-form label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 500;
+    }
+
+    .book-trip-form input,
+    .book-trip-form select,
+    .book-trip-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 18px;
+      border: 1px solid #e0e0e0;
+      border-radius: 6px;
+      font-size: 1rem;
+      background: #fafbfc;
+      box-sizing: border-box;
+    }
+
+    .book-trip-form textarea {
+      resize: vertical;
+      min-height: 60px;
+    }
+
+    .book-trip-form button {
+      width: 100%;
+      padding: 12px;
+      background: #1e88e5;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .book-trip-form button:hover {
+      background: #1565c0;
+    }
+
+    /* Responsive styles */
+    @media (max-width: 600px) {
+      .book-trip-container {
+        max-width: 100%;
+        margin: 16px;
+        padding: 16px 6px;
+        border-radius: 8px;
+      }
+
+      .book-trip-header h2 {
+        font-size: 1.4rem;
+      }
+
+      .book-trip-form input,
+      .book-trip-form select,
+      .book-trip-form textarea {
+        font-size: 0.95rem;
+        padding: 8px;
+      }
+
+      .book-trip-form button {
+        font-size: 1rem;
+        padding: 10px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .book-trip-container {
+        margin: 4px;
+        padding: 8px 2px;
+      }
+
+      .book-trip-header h2 {
+        font-size: 1.1rem;
+      }
+    }
+
+    .book-now-btn {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      background: #1e88e5;
+      color: #fff;
+      border-radius: 6px;
+      text-align: center;
+      font-size: 1.1rem;
+      font-weight: 500;
+      text-decoration: none;
+      margin-top: 8px;
+      transition: background 0.2s;
+    }
+
+    .book-now-btn:hover {
+      background: #1565c0;
+    }
+
+    @media (max-width: 600px) {
+      .book-now-btn {
+        font-size: 1rem;
+        padding: 10px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .book-now-btn {
+        font-size: 0.95rem;
+        padding: 8px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="nav__header">
+      <div class="nav__logo">
+        <img src="images/Amanda's T&T global.jpg" alt="" /><a href="#" class="logo"></a>
+      </div>
+      <div class="nav__menu__btn" id="menu-btn">
+        <i class="ri-menu-line"></i>
+      </div>
+    </div>
+
+    <ul class="nav__links" id="nav-links">
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="About.html">ABOUT</a></li>
+      <li><a href="Tour.html">TOUR</a></li>
+      <li><a href="Package.html">PACKAGE</a></li>
+      <li><a href="Contact.html">CONTACT</a></li>
+      <li><a href="book-trip.html">BOOK TRIP</a></li>
+    </ul>
+
+    <div class="nav__btns">
+      <div class="btn">
+        <a href="book-trip.html" class="book-now-btn">BOOK TRIP</a>
+      </div>
+    </div>
+  </nav>
+
+  <header id="home" style="background: url('images/header-bg.jpg') center center/cover no-repeat;">
+    <div class="header__container">
+      <div class="header__content">
+        <p>ELEVATE YOUR TRAVEL JOURNEY WITH AMANDA'S T&T GLOBAL</p>
+        <h1>
+          Experience The Magic Of <span class="hero__span">Flight</span><span class="hero__span__2">!</span>
+        </h1>
+        <div class="header__btns">
+          <a href="book-trip.html" class="btn">Book A Trip Now</a>
+        </div>
+      </div>
+
+      <div class="header__image">
+        <img src="images/header.png" alt="header" />
+      </div>
+    </div>
+  </header>
+
+  <div class="book-trip-container">
+    <div class="book-trip-header">
+      <h2>Book a Trip</h2>
+      <p>Plan your next adventure with Amanda's T&T Global</p>
+    </div>
+    <form class="book-trip-form" action="#" method="post">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" required />
+
+      <label for="destination">Destination</label>
+      <select id="destination" name="destination" required>
+        <option value="">Select Destination</option>
+        <optgroup label="Africa">
+          <option value="Nigeria">Nigeria</option>
+          <option value="South Africa">South Africa</option>
+          <option value="Egypt">Egypt</option>
+          <option value="Kenya">Kenya</option>
+          <option value="Morocco">Morocco</option>
+          <option value="Ghana">Ghana</option>
+          <option value="Ethiopia">Ethiopia</option>
+          <option value="Tanzania">Tanzania</option>
+          <option value="Uganda">Uganda</option>
+          <option value="Senegal">Senegal</option>
+          <option value="Rwanda">Rwanda</option>
+          <option value="Ivory Coast">Ivory Coast</option>
+          <option value="Cameroon">Cameroon</option>
+          <option value="Botswana">Botswana</option>
+          <option value="Zambia">Zambia</option>
+          <option value="Zimbabwe">Zimbabwe</option>
+          <option value="Namibia">Namibia</option>
+          <option value="Tunisia">Tunisia</option>
+          <option value="Algeria">Algeria</option>
+          <option value="Mozambique">Mozambique</option>
+        </optgroup>
+        <optgroup label="Nigeria States">
+          <option value="Abia">Abia</option>
+          <option value="Adamawa">Adamawa</option>
+          <option value="Akwa Ibom">Akwa Ibom</option>
+          <option value="Anambra">Anambra</option>
+          <option value="Bauchi">Bauchi</option>
+          <option value="Bayelsa">Bayelsa</option>
+          <option value="Benue">Benue</option>
+          <option value="Borno">Borno</option>
+          <option value="Cross River">Cross River</option>
+          <option value="Delta">Delta</option>
+          <option value="Ebonyi">Ebonyi</option>
+          <option value="Edo">Edo</option>
+          <option value="Ekiti">Ekiti</option>
+          <option value="Enugu">Enugu</option>
+          <option value="Gombe">Gombe</option>
+          <option value="Imo">Imo</option>
+          <option value="Jigawa">Jigawa</option>
+          <option value="Kaduna">Kaduna</option>
+          <option value="Kano">Kano</option>
+          <option value="Katsina">Katsina</option>
+          <option value="Kebbi">Kebbi</option>
+          <option value="Kogi">Kogi</option>
+          <option value="Kwara">Kwara</option>
+          <option value="Lagos">Lagos</option>
+          <option value="Nasarawa">Nasarawa</option>
+          <option value="Niger">Niger</option>
+          <option value="Ogun">Ogun</option>
+          <option value="Ondo">Ondo</option>
+          <option value="Osun">Osun</option>
+          <option value="Oyo">Oyo</option>
+          <option value="Plateau">Plateau</option>
+          <option value="Rivers">Rivers</option>
+          <option value="Sokoto">Sokoto</option>
+          <option value="Taraba">Taraba</option>
+          <option value="Yobe">Yobe</option>
+          <option value="Zamfara">Zamfara</option>
+          <option value="FCT - Abuja">FCT - Abuja</option>
+        </optgroup>
+        <optgroup label="Asia">
+          <option value="China">China</option>
+          <option value="India">India</option>
+          <option value="Japan">Japan</option>
+          <option value="South Korea">South Korea</option>
+          <option value="Thailand">Thailand</option>
+          <option value="Indonesia">Indonesia</option>
+          <option value="Malaysia">Malaysia</option>
+          <option value="Singapore">Singapore</option>
+          <option value="Vietnam">Vietnam</option>
+          <option value="Philippines">Philippines</option>
+          <option value="United Arab Emirates">United Arab Emirates</option>
+          <option value="Saudi Arabia">Saudi Arabia</option>
+          <option value="Turkey">Turkey</option>
+          <option value="Israel">Israel</option>
+          <option value="Pakistan">Pakistan</option>
+        </optgroup>
+        <optgroup label="Europe">
+          <option value="United Kingdom">United Kingdom</option>
+          <option value="France">France</option>
+          <option value="Germany">Germany</option>
+          <option value="Italy">Italy</option>
+          <option value="Spain">Spain</option>
+          <option value="Netherlands">Netherlands</option>
+          <option value="Switzerland">Switzerland</option>
+          <option value="Greece">Greece</option>
+          <option value="Portugal">Portugal</option>
+          <option value="Russia">Russia</option>
+          <option value="Sweden">Sweden</option>
+          <option value="Norway">Norway</option>
+          <option value="Denmark">Denmark</option>
+          <option value="Finland">Finland</option>
+          <option value="Ireland">Ireland</option>
+          <option value="Austria">Austria</option>
+          <option value="Belgium">Belgium</option>
+          <option value="Poland">Poland</option>
+          <option value="Czech Republic">Czech Republic</option>
+          <option value="Hungary">Hungary</option>
+        </optgroup>
+        <optgroup label="North America">
+          <option value="United States">United States</option>
+          <option value="Canada">Canada</option>
+          <option value="Mexico">Mexico</option>
+          <option value="Cuba">Cuba</option>
+          <option value="Jamaica">Jamaica</option>
+          <option value="Dominican Republic">Dominican Republic</option>
+          <option value="Panama">Panama</option>
+          <option value="Costa Rica">Costa Rica</option>
+          <option value="Bahamas">Bahamas</option>
+          <option value="Barbados">Barbados</option>
+        </optgroup>
+        <optgroup label="South America">
+          <option value="Brazil">Brazil</option>
+          <option value="Argentina">Argentina</option>
+          <option value="Chile">Chile</option>
+          <option value="Colombia">Colombia</option>
+          <option value="Peru">Peru</option>
+          <option value="Ecuador">Ecuador</option>
+          <option value="Bolivia">Bolivia</option>
+          <option value="Uruguay">Uruguay</option>
+          <option value="Paraguay">Paraguay</option>
+          <option value="Venezuela">Venezuela</option>
+        </optgroup>
+        <optgroup label="Australia & Oceania">
+          <option value="Australia">Australia</option>
+          <option value="New Zealand">New Zealand</option>
+          <option value="Fiji">Fiji</option>
+          <option value="Papua New Guinea">Papua New Guinea</option>
+          <option value="Samoa">Samoa</option>
+          <option value="Tonga">Tonga</option>
+          <option value="Vanuatu">Vanuatu</option>
+          <option value="Solomon Islands">Solomon Islands</option>
+        </optgroup>
+      </select>
+
+      <label for="dates">Travel Dates</label>
+      <input type="text" id="dates" name="dates" placeholder="e.g. 2024-07-10 to 2024-07-20" required />
+
+      <label for="guests">Number of Guests</label>
+      <input type="number" id="guests" name="guests" min="1" max="20" required />
+
+      <label for="notes">Additional Requests</label>
+      <textarea id="notes" name="notes" placeholder="Let us know your preferences..."></textarea>
+
+
+      <a href="Book-Now.html" class="book-now-btn">Book Now</a>
+    </form>
+  </div>
+
+  <footer id="contact">
+    <div class="footer__col">
+      <div class="footer__logo">
+        <a href="#" class="logo">AMANDA'S T&T GLOBAL</a>
+      </div>
+      <p>
+        Explore the world with ease and excitement through our comprehensive
+        travel platform. Your journey begins here with Amanda's Travels and
+        tour global, where seamless planning meets unforgettable
+        experiences.
+      </p>
+      <ul class="footer__socials">
+        <li>
+          <a href="https://www.facebook.com/people/Amandas-travels-and-tour-global/100079722506470/" target="_blank">
+            <i class="ri-facebook-fill"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://instagram.com/mercychimamandao" target="_blank">
+            <i class="ri-instagram-line"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://youtube.com/" target="_blank">
+            <i class="ri-youtube-line"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4>Quick Links</h4>
+      <ul class="footer__links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Flights</a></li>
+        <li><a href="#">Hotels</a></li>
+        <li><a href="#">Cruise</a></li>
+      </ul>
+    </div>
+    <div class="footer__col" style="font-size: 1rem; padding: 10px;">
+      <h4>Contact Us</h4>
+      <ul class="footer__links">
+        <li>
+          <a href="tel:+2348061254125"><span><i class="ri-phone-fill"></i></span> +234 8061254125</a>
+        </li>
+        <li>
+          <a href="mailto:amandastravelsandtourglobal@gmail.com"><span><i
+                class="ri-record-mail-line"></i></span>amandastravelsandtourglobal@gmail.com</a>
+        </li>
+        <li>
+          <a href="https://www.google.com/maps/place/Lagos,+Nigeria"><span><i class="ri-map-pin-2-fill"></i></span>
+            Lagos, Nigeria</a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4>Subscribe</h4>
+      <form action="/">
+        <input type="text" placeholder="Enter your email" />
+        <button class="btn">Subscribe</button>
+      </form>
+    </div>
+    </div>
+    <div class="footer__bar">
+      Copyright © 2025 Miracle Okechukwu. All rights reserved.
+    </div>
+  </footer>
+</body>
+
+</html>
